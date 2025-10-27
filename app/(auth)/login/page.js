@@ -26,7 +26,7 @@ function Login() {
                             <input id="remember" aria-describedby="remember" name="remember" type="checkbox" className="w-4 h-4 border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600" required />
                         </div>
                         <div className="ms-3 text-sm">
-                        <label for="remember" className="font-medium text-gray-500 dark:text-gray-400">Remember this device</label>
+                        <label htmlFor="remember" className="font-medium text-gray-500 dark:text-gray-400">Remember this device</label>
                         </div>
                         <a href="#" className="ms-auto text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Lost Password?</a>
                     </div>

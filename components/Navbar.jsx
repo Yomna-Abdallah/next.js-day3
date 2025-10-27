@@ -13,6 +13,7 @@ export default function Navbar() {
     { name: "Contact", path: "/contact" },
     { name: "Products", path: "/products" },
     { name: "Login", path: "/login" },
+    { name: "isr", path: "/isr" },
   ];
 
   return (
