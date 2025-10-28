@@ -8,6 +8,10 @@ async function getTodos() {
   const todos = await Todo.find({}).lean();
   return todos.map(t => ({ ...t, _id: t._id.toString() }));
 }
+
+//
+export const dynamic = "force-dynamic";
+
 export default async function TodoPage() {
   const todos = await getTodos();
 
