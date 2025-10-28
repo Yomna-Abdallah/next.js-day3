@@ -6,6 +6,16 @@ async function getSingleProduct(id) {
   return res.json();
 }
 
+export async function generateMetadata({params}) {
+  const {id}=await params;
+  const product=await getSingleProduct(id);
+
+  return{
+    title:product.title,
+    description:product.description,
+  }
+}
+
 // Fetch all products for static paths
 async function getAllProducts() {
   const res = await fetch(`https://fakestoreapi.com/products`);
@@ -40,10 +50,10 @@ const ProductDetails = async ({ params }) => {
 
       {/* Product Details */}
       <div className="max-w-lg">
-        <h1 className="text-3xl font-bold mb-4 text-gray-800">
+        <h1 className="text-3xl font-bold mb-4 text-amber-50">
           {product.title}
         </h1>
-        <p className="text-gray-600 mb-6">{product.description}</p>
+        <p className="text-amber-50 mb-6">{product.description}</p>
         <p className="text-xl font-semibold text-blue-600 mb-4">
           ${product.price}
         </p>
